@@ -15,8 +15,11 @@ const FilterTransformer = require('panto-transformer-filter');
 
 class IgnoreTransformer extends FilterTransformer {
     _transform(file) {
-        return super._transform(file).then(nfile => {
-            return (file === nfile) ? null : file;
+        return super._transform(file).then(files => {
+            if (!files || Array.isArray(files)) {
+                return file;
+            }
+            return null;
         });
     }
 }
