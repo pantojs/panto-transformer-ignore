@@ -1,6 +1,6 @@
 {
   "name": "panto-transformer-ignore",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Ignore transformer for panto",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/pantojs/panto-transformer-ignore",
   "dependencies": {
-    "panto-transformer-filter": "^0.1.1"
+    "panto-transformer-filter": "^0.1.2"
   },
   "devDependencies": {
     "eslint": "^2.13.1"
