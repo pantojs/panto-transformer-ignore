@@ -6,8 +6,8 @@
  * 2016-06-24[16:26:41]:revised
  *
  * @author yanni4night@gmail.com
- * @version 1.0.0
- * @since 1.0.0
+ * @version 0.2.3
+ * @since 0.1.0
  */
 'use strict';
 const assert = require('assert');
@@ -89,7 +89,7 @@ describe('panto-transformer-ignore', () => {
             };
 
             new IgnoreTransformer({
-                pattern: [/^m\w+\.js/, 'm*k.js']
+                pattern: ['*.css', 'm*k.js']
             }).transform(file).then(tfile => {
                 assert.deepEqual(tfile, null);
             }).then(() => {
