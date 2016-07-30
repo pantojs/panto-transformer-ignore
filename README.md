@@ -6,11 +6,11 @@ Ignore transformer for panto.
 ```js
 panto.loadTransformer('ignore');
 
-panto.pick('**/*').pipe(panto.ignore({
+panto.pick('**/*').ignore({
     pattern: [/.es$/, filename => {
         return filename[0] === '.';
     }, 'src/**/*.md']
-})).pipe(panto.read()).end();
+}).read();
 ```
 
 ## options
